@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ind">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <title>Quiz Banjar Banjar</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="opening_window">
+        <div class="card">
+          <h1>Start Quiz Kalsel Banget</h1>
+        </div>
+        <button onclick="startQUiz()">Play Quiz</button>
+      </div>
+
+      <div class="quiz-container hidden" id="quiz_window">
+        <div class="quiz-header card">
+          <h2 id="question">Question Text</h2>
+          <ul>
+            <li for="">
+              <input
+                type="radio"
+                name="choices"
+                id="choices0"
+                data-id="0"
+                class="answer"
+              />
+              <label for="choices0" id="charsetText0">Answer</label>
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="choices"
+                id="choices1"
+                data-id="1"
+                class="answer"
+              />
+              <label for="choices1" id="charsetText1">Answer</label>
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="choices"
+                id="choices2"
+                data-id="2"
+                class="answer"
+              />
+              <label for="choices2" id="charsetText2">Answer</label>
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="choices"
+                id="choices3"
+                data-id="3"
+                class="answer"
+              />
+              <label for="choices3" id="charsetText3">Answer</label>
+            </li>
+          </ul>
+        </div>
+        <button id="submit" onclick="nextQuestion()">Next</button>
+      </div>
+
+      <div id="closing_window" class="hidden">
+        <div class="card" id="card">
+          <h1>Quiz Kalsel Banget</h1>
+          <h2>Score kamu tentang Kalsel</h2>
+          <h2 id="scoreText"></h2>
+        </div>
+        <button id="submit" onclick="location.reload()">Reload</button>
+        <button id="shareBtn" onclick="share()">Share</button>
+      </div>
+    </div>
+    <div class="previewImage"></div>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/html2canvas/html2canvas.min.js"></script>
+  </body>
+</html>
